@@ -1,0 +1,113 @@
+.big-card-group {
+ 
+    .big-card {
+        width: 20.3125rem;
+        height: 13.5625rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint-up(medium){
+            margin-right: 1.875rem;
+            width: 15.9rem;
+            height: 13.25rem;
+        }
+
+        &.facebook {
+            border-top: 5px solid $facebook;
+        }
+        &.twitter {
+            border-top: 5px solid $twitter;
+        }
+        &.instagram {
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                background: $instagram;
+                height: 5px;
+                border-radius: 5px 5px 0 0;
+            }
+            
+        }
+
+        &.youtube {
+            border-top: 5px solid $youtube;
+        }
+        
+
+        .big-card-container {
+            padding: 1.625rem 6.3125rem;
+            text-align: center;
+  
+            @include breakpoint-up(medium){
+                padding: 1.75rem 4.125rem;
+            }
+
+            .big-card-header {
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .9rem;
+                
+
+                .big-card-icon {
+                    margin-right: 0.5rem;
+                    
+                }
+        
+                .big-card-handle {
+                    display: inline-block;
+                   
+                }
+            }
+
+            
+
+            .big-card-middle {
+
+                .big-card-followers {
+                    font-size: $font3xl;
+                }
+
+                .big-card-subheader {
+                    font-size: $fontReg;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    font-weight: map-get($fontWeights, "regular" );
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .big-card-footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .big-card-arrow-icon {
+                    margin-right: 0.2rem;
+                }
+
+
+                .big-card-count {
+                    display: inline-block;
+                    // color: $limeGreen;
+                    
+                    &.uptick-txt-color {
+                        color: $limeGreen;
+                    }
+                    
+                    &.downtick-txt-color {
+                        color: $brightRed; 
+                    }
+                }
+            }
+        }
+
+    }
+}

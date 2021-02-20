@@ -1,0 +1,274 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, hr, label {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+p {
+    font-size: $fontReg;
+}
+
+h2 {
+    font-size: $fontLg;
+    margin-bottom: 2.0625rem;
+
+    @include breakpoint-up(medium){
+        margin-bottom: 1.875rem;
+    }
+}
+
+body {
+    font-family: $typeInter;
+    line-height: 1.3;
+    font-weight: map-get($fontWeights, "bold");
+    margin: 2.4375rem auto 2.75rem auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.backgroundpattern {
+    position: absolute;
+    width: 100%;
+    height: 16rem;
+    z-index: -1;
+    top: -40px;
+    left: -10px;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 2.5rem;
+}
+
+
+//Flex
+.flex {
+    display: flex;
+    max-width: 20.3125rem;
+
+    @include breakpoint-up(medium){
+        max-width: 33.8125rem;
+    }
+
+    @include breakpoint-up(large){
+        max-width: 69.6875rem;
+    }
+
+    &-direction {
+        flex-direction: column;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+
+//Grid 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 auto 3.125rem auto;
+    max-width: 20.3125rem;
+ 
+    @include breakpoint-up(medium){
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 33.8125rem;
+    }
+
+    @include breakpoint-up(large){
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 69.6875rem;
+    }
+}
+
+
+.dark-theme {
+    background-color: $darkBg;
+
+    h1,h2 {
+        color: $darkTextWhite;
+    }
+
+    .backgroundpattern {
+        background-color: $darkTopBgPattern;
+    }
+
+    .followers {
+        color: $darkTextBlue
+    }
+
+    .big-card, .small-card{
+        background-color: $darkCardBg;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.25);
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+        }
+    
+        &:hover::before {
+            opacity: 0.6;
+        }
+    }
+
+    
+    .toggle-container:hover {
+
+         p {
+            color: $darkTextWhite;
+            transition: opacity 300ms ease-in-out;
+        }
+    }
+
+    .toggle-switch {
+
+        .switch {
+            background: $toggleDark;
+        }
+
+        .switch:before {
+            background: $darkTopBgPattern;
+
+        }
+      
+        input:checked + .switch {
+            background: $toggleDark;
+
+        }
+
+    } 
+
+    .big-card-followers, .small-card-number {
+        color: $darkTextWhite;
+    }
+
+    p {
+        color: $darkTextBlue;
+    }
+
+}
+
+.light-theme {
+    background-color: $lightBg;
+
+    h1 {
+        color: $lightTextBlue;
+    }
+
+    .followers,h2 {
+        color: $lightTextGreyBlue;
+    }
+
+    .backgroundpattern {
+        background-color: $lightTopBgPattern;
+    }
+
+    .big-card, .small-card {
+        background-color:$lightCardBg;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(20, 18, 18, 0.228);
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+        }
+    
+        &:hover::before {
+            opacity: 0.4;
+        }
+    }
+
+    .toggle-switch {
+        .switch {
+            background: $toggleLight;  
+        }
+
+        .switch:before {
+            background: $lightTopBgPattern;
+        }
+
+
+        input:checked + .switch {
+            background: $toggleLight;
+            transition: opacity 100ms ease-in-out;
+
+            &:hover {
+                background: $toggleDark;
+                transition: opacity 100ms ease-in-out;
+            }
+        }
+    } 
+
+
+
+
+    .big-card-followers, .small-card-number {
+        color: $lightTextBlue;
+    }
+
+    p {
+        color: $lightTextGreyBlue;
+    }
+}
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+}

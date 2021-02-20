@@ -1,0 +1,44 @@
+
+
+//Colors Primary
+$limeGreen: #1db489;
+$brightRed: #dc414c;
+$facebook: #198ff5;
+$twitter: #1ca0f2;
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: #c4032a;
+
+//Colors Dark Theme
+$toggleDark: linear-gradient(to right, #378fe6, #3eda82);
+$darkBg: #1e202a;
+$darkTopBgPattern: hsl(232, 19%, 15%);
+$darkCardBg: hsl(228, 28%, 20%);
+$darkTextBlue: #8b97c6;
+$darkTextWhite: #ffffff;
+
+//Colors Light Theme
+$toggleLight: hsl(230, 22%, 74%);
+$lightBg: #ffffff;
+$lightTopBgPattern: hsl(225, 100%, 98%);
+$lightCardBg: hsl(227, 47%, 96%);
+$lightTextGreyBlue: #63687e;
+$lightTextBlue: #1e202a;
+
+
+// Typography
+$typeInter: 'Inter', sans-serif;
+
+//Fonts
+
+$fontReg: 0.75rem; //12px
+$fontMed: 0.875rem; //14px
+$fontLg: 1.25rem; //20px
+$fontXlg: 1.4375rem; //23px
+$font2xl: 1.625rem; //26px
+$font3xl: 2.8125rem; //45px
+
+
+$fontWeights: (
+    "regular": 400,
+    "bold": 700
+)

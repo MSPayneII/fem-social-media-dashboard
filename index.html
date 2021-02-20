@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./dist/css/style.css">
+  
+  <title>Frontend Mentor | Social Media Dashboard with theme switcher</title>
+</head>
+
+<body class="light-theme">
+
+  <div class="backgroundpattern"></div>
+
+    <header class="header flex flex-jc-sb flex-direction">
+        <section class="title-followers-container">
+          <h1>
+            Social Media Dashboard <br/>
+            <span class="followers">Total Followers: 23,004</span>
+          </h1>
+
+          <hr>
+        </section>
+
+        <section class="toggle-container">
+          <p>Dark Mode</p>
+
+          <label class="toggle-switch">
+            <input type="checkbox" class="checkbox" />
+            <span class="switch"></span>
+          </label>
+        </section>
+    </header>
+
+    <main>
+      <section class="big-card-group grid">
+        <article class="big-card facebook">
+          <div class="big-card-container">  
+            <section class="big-card-header">
+              <img class="big-card-icon" src="./images/icon-facebook.svg" alt="Facebook Icon">
+              <p class="big-card-handle">@nathanf</p>
+            </section>
+            <section class="big-card-middle">
+              <p class="big-card-followers">1987</p>
+              <p class="big-card-subheader">Followers</p>
+            </section>
+            <section class="big-card-footer">
+              <img src="./images/icon-up.svg" alt="up arrow icon" class="big-card-arrow-icon">
+              <p class="big-card-count uptick-txt-color">12 Today</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="big-card twitter">
+          <div class="big-card-container">  
+            <section class="big-card-header">
+              <img class="big-card-icon" src="./images/icon-twitter.svg" alt="Twitter Icon">
+              <p class="big-card-handle">@nathanf</p>
+            </section>
+            <section class="big-card-middle">
+              <p class="big-card-followers">1044</p>
+              <p class="big-card-subheader">Followers</p>
+            </section>
+            <section class="big-card-footer">
+              <img src="./images/icon-up.svg" alt="up arrow icon" class="big-card-arrow-icon">
+              <p class="big-card-count uptick-txt-color">99 Today</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="big-card instagram ">
+          <div class="big-card-container">  
+            <section class="big-card-header">
+              <img class="big-card-icon" src="./images/icon-instagram.svg" alt="Instagram Icon">
+              <p class="big-card-handle">@realnathanf</p>
+            </section>
+            <section class="big-card-middle">
+              <p class="big-card-followers">11k</p>
+              <p class="big-card-subheader">Followers</p>
+            </section>
+            <section class="big-card-footer">
+              <img src="./images/icon-up.svg" alt="up arrow icon" class="big-card-arrow-icon">
+              <p class="big-card-count uptick-txt-color">1099 Today</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="big-card youtube">
+          <div class="big-card-container">  
+            <section class="big-card-header">
+              <img class="big-card-icon" src="./images/icon-youtube.svg" alt="Youtube Icon">
+              <p class="big-card-handle">Nathan F.</p>
+            </section>
+            <section class="big-card-middle">
+              <p class="big-card-followers">8239</p>
+              <p class="big-card-subheader">Subscribers</p>
+            </section>
+            <section class="big-card-footer">
+              <img src="./images/icon-down.svg" alt="up arrow icon" class="big-card-arrow-icon">
+              <p class="big-card-count downtick-txt-color {
+                color: $brightRed; 
+            }">144 Today</p>
+            </section>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="overview-today">
+        <div class="title grid">
+          <h2>Overview - Today</h2>
+        </div>
+        
+     
+      <div class="grid">
+
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Page Views</p>
+              <img class="small-card-icon" src="./images/icon-facebook.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">87</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-up.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage uptick-txt-color ">3%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Likes</p>
+              <img class="small-card-icon" src="./images/icon-facebook.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">52</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-down.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage downtick-txt-color ">2%</p>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Likes</p>
+              <img class="small-card-icon" src="./images/icon-instagram.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">5462</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-up.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage uptick-txt-color ">2257%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Profile Views</p>
+              <img class="small-card-icon" src="./images/icon-instagram.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">52k</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-up.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage uptick-txt-color ">1375%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Retweets</p>
+              <img class="small-card-icon" src="./images/icon-twitter.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">117</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-up.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage uptick-txt-color ">303%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Likes</p>
+              <img class="small-card-icon" src="./images/icon-twitter.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">507</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-up.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage uptick-txt-color ">553%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Likes</p>
+              <img class="small-card-icon" src="./images/icon-youtube.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">107</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-down.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage downtick-txt-color ">19%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+        <article class="small-card">
+          <div class="small-card-container">  
+            <section class="small-card-top flex flex-jc-sb flex-ai-c">
+              <p class="small-card-title">Total Views</p>
+              <img class="small-card-icon" src="./images/icon-youtube.svg" alt="Facbook Icon">
+            </section>
+
+            <section class="small-card-bottom flex flex-jc-sb flex-ai-c">
+              <p class="small-card-number">1407</p>
+              <div class="stats flex flex-ai-c">
+                <img src="./images/icon-down.svg" alt="Up Arrow Icon" class="arrow-icon">
+                <p class="small-card-percentage downtick-txt-color ">12%</p>
+              </div>
+            </section>
+            
+          </div>
+        </article>
+
+      </div>
+      </section>
+
+    </main>
+
+
+  <footer>
+
+  </footer>
+  <script src="./dist/js/script.js"></script>
+</body>
+</html>
+
+<!-- 
+
+ 
+  
+  
+  
+
+  
+  
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->

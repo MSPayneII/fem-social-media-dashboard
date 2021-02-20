@@ -1,0 +1,62 @@
+.overview-today {
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    .grid {
+
+        .small-card {
+            width: 20.3125rem;
+            height: 7.8125rem;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+
+            @include breakpoint-up(medium){
+                margin-right: 1.875rem;
+                width: 15.9rem;
+                height: 7.9375rem;
+            }
+
+            .small-card-container {
+                padding: 1.625rem 1.875rem 1.625rem 1.5rem;
+
+                .small-card-top {
+                    margin-bottom: 1.7rem;
+
+                    .small-card-title {
+                        font-size: $fontMed;
+                    }
+                }
+
+                .small-card-bottom {
+                    .small-card-number {
+                        font-size: $font2xl;
+                    }
+
+                    .arrow-icon {
+                        margin-right: 0.2rem;
+                    }  
+                    
+                    .small-card-percentage {
+                        display: inline-block;
+
+                        &.uptick-txt-color {
+                            color: $limeGreen;
+                        }
+                        
+                        &.downtick-txt-color {
+                            color: $brightRed; 
+                        }
+                    }
+                } 
+            }  
+        }
+    }
+}
+
+
+
+
+    
